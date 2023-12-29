@@ -11,7 +11,7 @@
 \setlength{\fboxsep}{12pt}
 
 % Set the paragraph skip
-\setlength{\parskip}{3pt}
+% \setlength{\parskip}{3pt}
 
 % Access to a counter for the number of pages
 \usepackage{lastpage}
@@ -51,7 +51,7 @@
 
 % Set the section labeling font
 \allsectionsfont{\textsf\bfseries}
-
+\allsectionsfont{\fontfamily{charter}\raggedright}
 %----------------------------------------
 % Caption style
 \usepackage[font=small, labelfont=bf, skip=5pt]{caption}
@@ -63,17 +63,17 @@
 
 
 % Define the title page style
-\fancypagestyle{titlePage}{%
-\fancyhf{}%
+% \fancypagestyle{titlePage}{%
+% \fancyhf{}%
 
-\fancyhead[L]{\includegraphics[height=0.45in]{UL_N}}
-\fancyhead[C]{\raisebox{0.2in}{\textsc{Technical Report}}}
-\fancyhead[R]{\includegraphics[height=0.45in]{norlab_logo_acronym_dark}}
-\fancyfoot[C]{\thepage/\pageref*{LastPage}}
+% \fancyhead[L]{\includegraphics[height=0.45in]{UL_N}}
+% \fancyhead[C]{\raisebox{0.2in}{\textsc{Technical Report}}}
+% \fancyhead[R]{\includegraphics[height=0.45in]{norlab_logo_acronym_dark}}
+% \fancyfoot[C]{\thepage/\pageref*{LastPage}}
 
-\renewcommand{\headrulewidth}{0.1pt}
-\renewcommand{\footrulewidth}{0.2pt}
-}
+% \renewcommand{\headrulewidth}{0.1pt}
+% \renewcommand{\footrulewidth}{0.2pt}
+% }
 
 % Define the page style for the other pages
 \fancypagestyle{plain}{%
@@ -96,12 +96,7 @@
 % ---------------------------------------------------------------
 % Author
 
-\author{\reportAuthors{} \\
-       Laval University\\
-       1065, av. de la Médecine \\
-       Quebec, Qc \\
-       Canada G1V 0A6 \\
-}
+\author{\reportAuthors{}}
 
 % ---------------------------------------------------------------
 % PDF setup
@@ -114,3 +109,8 @@
     urlcolor=cyan,
     linkcolor=red,
 }%
+
+% \newlength\tindent
+% \setlength{\tindent}{\parindent}
+% \setlength{\parindent}{0pt}
+% \renewcommand{\indent}{\hspace*{\tindent}}
